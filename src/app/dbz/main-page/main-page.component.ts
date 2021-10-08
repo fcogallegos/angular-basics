@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
+import { Personage } from '../interfaces/dbz.interface';
 
-interface Personage {
-  name: string;
-  power: number;
-}
 
 
 @Component({

@@ -4,12 +4,14 @@ import { FormsModule } from '@angular/forms';
 
 import { MainPageComponent } from './main-page/main-page.component';
 import { PersonagesComponent } from './personages/personages.component';
+import { AddComponent } from './add/add.component';
 
 
 @NgModule({
   declarations: [
     MainPageComponent,
-    PersonagesComponent
+    PersonagesComponent,
+    AddComponent
   ],
   imports: [
     CommonModule,

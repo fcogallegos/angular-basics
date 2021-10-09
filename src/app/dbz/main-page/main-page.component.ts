@@ -20,26 +20,13 @@ export class MainPageComponent {
     }
   ];
 
-  new: Personage = {
-    name: '',
-    power: 0
-  }
-
-  add() {
-    if( this.new.name.trim().length === 0 ) { return; }
-    
-    console.log( this.new );
-
-    this.personages.push(this.new);
-
-    this.new = {
-      name: "",
-      power: 0
-    }
-  }
-
   changeName(event: any) {
     console.log( event.target.value );
+  }
+
+  new: Personage = {
+    name: "Rochi Teacher",
+    power: 1200
   }
 
 }

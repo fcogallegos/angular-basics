@@ -29,4 +29,9 @@ export class MainPageComponent {
     power: 1200
   }
 
+  addNewPersonage( arg: Personage ) {
+    this.personages.push( arg );
+  }
+
+
 }

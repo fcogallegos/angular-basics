@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
 import { Personage } from '../interfaces/dbz.interface';
 
 @Component({
@@ -7,26 +8,24 @@ import { Personage } from '../interfaces/dbz.interface';
 })
 export class AddComponent {
 
-  @Input() personages: Personage[] = [];
-
   @Input() new: Personage = {
     name: '',
     power: 0
   }
 
+  @Output() onNewPersonage: EventEmitter<Personage> = new EventEmitter();
+
   add() {
     if( this.new.name.trim().length === 0 ) { return; }
     
     console.log( this.new );
-
-    this.personages.push(this.new);
+    this.onNewPersonage.emit( this.new );
 
     this.new = {
       name: "",
       power: 0
     }
     
-    console.log(this.personages);
   }
 
 }

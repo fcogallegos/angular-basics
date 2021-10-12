@@ -8,8 +8,8 @@
 
     <div class="col">
         <app-add 
-            [personages]="personages"
             [new]="new"
+            (onNewPersonage)="addNewPersonage( $event )"
         ></app-add>
     </div>
 </div>
